@@ -15,46 +15,46 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/eosc-observatory git:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-celadon-monkey.sh
-        container: qc.acc_clammy-azure-bear
+        - /usr/bin/env sh .sqa/script.seedy-buff-leopard.sh
+        container: qc.acc_hilly-plum-bonobo
   QC.Doc:
     repos:
       github.com/madgeek-arc/eosc-observatory find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-pear-foxhound.sh
-        container: qc.doc_surly-tan-leopard
+        - /usr/bin/env sh .sqa/script.flabby-amaranth-dugong.sh
+        container: qc.doc_pasty-wisteria-saola
       github.com/madgeek-arc/eosc-observatory git:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-chartreuse-bat.sh
-        container: qc.doc_tasty-black-hamster
+        - /usr/bin/env sh .sqa/script.gimpy-alizarin-manatee.sh
+        container: qc.doc_homey-emerald-drever
       github.com/madgeek-arc/eosc-observatory markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-amber-coati.sh
-        container: qc.doc_whiny-buff-mayfly
+        - /usr/bin/env sh .sqa/script.lumpy-pumpkin-vole.sh
+        container: qc.doc_sleepy-coral-sparrow
   QC.Lic:
     repos:
       github.com/madgeek-arc/eosc-observatory licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-burgundy-fowl.sh
-        container: qc.lic_geeky-yellow-warthog
+        - /usr/bin/env sh .sqa/script.blurry-denim-moose.sh
+        container: qc.lic_wheezy-chartreuse-elephant
   QC.Sty:
     repos:
       github.com/madgeek-arc/eosc-observatory checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-magnolia-armadillo.sh
-        container: qc.sty_hilly-thistle-impala
+        - /usr/bin/env sh .sqa/script.pasty-burgundy-dalmatian.sh
+        container: qc.sty_bumpy-orange-ragdoll
       github.com/madgeek-arc/eosc-observatory hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-saffron-snail.sh
-        container: qc.sty_pretty-magnolia-dolphin
+        - /usr/bin/env sh .sqa/script.snippy-viridian-moorhen.sh
+        container: qc.sty_woolly-ecru-turtle
       github.com/madgeek-arc/eosc-observatory jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-periwinkle-mist.sh
-        container: qc.sty_craggy-sangria-tang
+        - /usr/bin/env sh .sqa/script.greasy-mustard-jaguar.sh
+        container: qc.sty_lousy-firebrick-chinchilla
   QC.Ver:
     repos:
       github.com/madgeek-arc/eosc-observatory get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-brown-seahorse.sh
-        container: qc.ver_squeaky-scarlet-olm
+        - /usr/bin/env sh .sqa/script.gloppy-scarlet-leopard.sh
+        container: qc.ver_wheezy-burgundy-cockroach
 timeout: 5400
