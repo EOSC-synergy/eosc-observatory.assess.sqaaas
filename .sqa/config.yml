@@ -1,0 +1,60 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/pynblint_fix
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/madgeek-arc/eosc-observatory:
+      branch: main
+      repo: https://github.com/madgeek-arc/eosc-observatory
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/madgeek-arc/eosc-observatory git:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-mauve-affenpinscher.sh
+        container: qc.acc_hasty-yellow-dollar
+  QC.Doc:
+    repos:
+      github.com/madgeek-arc/eosc-observatory find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-lilac-quoll.sh
+        container: qc.doc_crappy-periwinkle-fox
+      github.com/madgeek-arc/eosc-observatory git:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-charcoal-vulture.sh
+        container: qc.doc_pretty-peach-axolotl
+      github.com/madgeek-arc/eosc-observatory markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-cerulean-ant.sh
+        container: qc.doc_wiggy-sepia-harrier
+  QC.Lic:
+    repos:
+      github.com/madgeek-arc/eosc-observatory licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-cerise-ocelot.sh
+        container: qc.lic_seedy-chocolate-whale
+  QC.Sty:
+    repos:
+      github.com/madgeek-arc/eosc-observatory checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-amber-fossa.sh
+        container: qc.sty_jumpy-smalt-deer
+      github.com/madgeek-arc/eosc-observatory hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-cerulean-wrasse.sh
+        container: qc.sty_leaky-sangria-toucan
+      github.com/madgeek-arc/eosc-observatory jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-olive-greyhound.sh
+        container: qc.sty_hilly-viridian-tetra
+  QC.Ver:
+    repos:
+      github.com/madgeek-arc/eosc-observatory get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-auburn-zebra.sh
+        container: qc.ver_geeky-seashell-cattle
+timeout: 5400
